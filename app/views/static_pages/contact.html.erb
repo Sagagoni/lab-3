@@ -1,0 +1,49 @@
+<div class="container mt-5">
+  <h1>Contact Us</h1>
+  <form id="contactForm" action="/contact_submit" method="post">
+    <div class="mb-3">
+      <label for="nameInput" class="form-label">Name</label>
+      <input type="text" class="form-control" id="nameInput" name="name">
+    </div>
+    <div class="mb-3">
+      <label for="emailInput" class="form-label">Email</label>
+      <input type="email" class="form-control" id="emailInput" name="email">
+    </div>
+    <div class="mb-3">
+      <label for="cellphoneInput" class="form-label">Cellphone</label>
+      <input type="tel" class="form-control" id="cellphoneInput" name="cellphone">
+    </div>
+    <div class="mb-3">
+      <label for="messageTextarea" class="form-label">Message</label>
+      <textarea class="form-control" id="messageTextarea" rows="3" name="message"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<br>
+<br>
+
+<div class="alert alert-warning alert-dismissible fade show" id="successAlert" role="alert" style="display:none; width: 70%; margin-left: 70px;">
+  <strong>Thank you for your message, we will contact you soon.</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var form = document.getElementById('contactForm');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+
+        var successAlert = document.getElementById('successAlert');
+        successAlert.style.display = 'block'; 
+        successAlert.classList.add('show', 'fade');
+
+        successAlert.addEventListener('closed.bs.alert', function () {
+           
+            window.location.href = '/'; 
+        });
+    });
+});
+
+</script>

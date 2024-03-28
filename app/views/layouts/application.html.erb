@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Y</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+  </head>
+
+  <body>
+    <%= render 'layouts/navbar' %>
+
+    <%= yield %>
+
+    <footer class="text-center bg-light text-muted">
+  <section class="p-4 border-bottom">
+    <span>Follow us on social media:</span>
+    <a href="" class="text-reset mx-2">
+      <i class="fab fa-facebook-f"></i> Facebook
+    </a>
+    <a href="" class="text-reset mx-2">
+      <i class="fab fa-twitter"></i> Twitter
+    </a>
+    <a href="" class="text-reset mx-2">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+  </section>
+
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2024 All Rights Reserved:
+    <a class="text-reset fw-bold" href="http://127.0.0.1:3000">Ama La Rosa</a>
+  </div>
+</footer>
+
+
+  
+  </body>
+</html>
