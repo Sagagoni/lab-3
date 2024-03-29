@@ -8,6 +8,15 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+
+    <style>
+    .footer{
+      position: absolute;
+      bottom: 0;
+      width: 100% ;
+    }
+    </style>
+
   </head>
 
   <body>
@@ -15,8 +24,8 @@
 
     <%= yield %>
 
-    <footer class="text-center bg-light text-muted">
-  <section class="p-4 border-bottom">
+    <footer class="text-center bg-light text-muted footer">
+    <section class="p-4 border-bottom">
     <span>Follow us on social media:</span>
     <a href="" class="text-reset mx-2">
       <i class="fab fa-facebook-f"></i> Facebook
